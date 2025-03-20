@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+3D Model Viewer
 
-## Getting Started
+This is a Next.js-based frontend application designed to display and interact with 3D models. It fetches model metadata from a FastAPI backend and renders the 3D models with textures.
 
-First, run the development server:
+Features
 
-```bash
+Built with Next.js and React Three Fiber
+
+Displays 3D models with textures
+
+Fetches metadata from a FastAPI backend
+
+Supports dynamic loading of models
+
+Responsive UI for seamless experience
+
+Installation
+
+1. Clone the Repository
+
+https://github.com/bisher-muhammed/3d-viewer.git
+
+2. Install Dependencies
+
+"@react-three/drei": "^10.0.4",
+
+    "@react-three/fiber": "^9.1.0",
+
+    "axios": "^1.8.4",
+
+    "next": "15.2.3",
+
+    "react": "^19.0.0",
+
+    "react-dom": "^19.0.0",
+
+    "three": "^0.174.0"
+
+
+
+3. Start the Development Server
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Backend Integration
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+This frontend interacts with a FastAPI backend for fetching 3D model metadata. Make sure the backend is running before testing the app.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+FastAPI Backend Repository: fastApi-backend
 
-## Learn More
+Running the Backend
 
-To learn more about Next.js, take a look at the following resources:
+Follow the instructions in the backend repository to set up and start the FastAPI server.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+API Endpoints Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Fetch Model MetadataURL: http://127.0.0.1:5000/python-model-infoMethod: GETResponse:
 
-## Deploy on Vercel
+Image & Model Endpoints
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+User Interface: http://localhost:3001/
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Model File: http://localhost:3001/models/capsule.obj
+
+Model Image: http://localhost:3001/models/capsule0.jpeg
+
+Model Metadata: http://localhost:3001/api/model-info
+
+
